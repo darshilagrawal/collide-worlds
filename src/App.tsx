@@ -226,12 +226,12 @@ function App() {
       <div className="container step-one">
         <h1 className="logo-text">COLLISION</h1>
         <p style={{ color: 'var(--text-dim)', marginBottom: '2.5rem', fontSize: '0.8rem', fontWeight: 800, letterSpacing: '0.1em' }}>SELECT YOUR SOUNDS</p>
-        <input type="file" ref={fileInputARef} accept="audio/*" onChange={handleFileA} style={{ display: 'none' }} />
+        <input type="file" ref={fileInputARef} accept="audio/*, .mp3, audio/mpeg, audio/mp3" onChange={handleFileA} style={{ display: 'none' }} />
         <div className={`upload-card ${trackAName ? 'filled' : ''}`} onClick={() => fileInputARef.current?.click()}>
           <span className="upload-num">01. PRIMARY TRACK</span>
           <span className="upload-status">{trackAName || 'TAP TO SELECT AUDIO'}</span>
         </div>
-        <input type="file" ref={fileInputBRef} accept="audio/*" onChange={handleFileB} style={{ display: 'none' }} />
+        <input type="file" ref={fileInputBRef} accept="audio/*, .mp3, audio/mpeg, audio/mp3" onChange={handleFileB} style={{ display: 'none' }} />
         <div className={`upload-card ${trackBName ? 'filled' : ''}`} onClick={() => fileInputBRef.current?.click()}>
           <span className="upload-num">02. SECONDARY TRACK</span>
           <span className="upload-status">{trackBName || 'TAP TO SELECT AUDIO'}</span>
@@ -277,7 +277,7 @@ function App() {
               <span className="deck-upload-text">UPLOAD TRACK A:</span>
               <span className="deck-upload-target">{trackAName}</span>
               <span className="deck-upload-hint">TAP TO COMPLETE THE COLLISION</span>
-              <input type="file" ref={fileInputARef} accept="audio/*" onChange={handleFileA} style={{ display: 'none' }} />
+              <input type="file" ref={fileInputARef} accept="audio/*, .mp3, audio/mpeg, audio/mp3" onChange={handleFileA} style={{ display: 'none' }} />
             </div>
           )}
           <div className="jukebox-header">
@@ -308,7 +308,7 @@ function App() {
               <span className="deck-upload-text">UPLOAD TRACK B:</span>
               <span className="deck-upload-target">{trackBName}</span>
               <span className="deck-upload-hint">TAP TO COMPLETE THE COLLISION</span>
-              <input type="file" ref={fileInputBRef} accept="audio/*" onChange={handleFileB} style={{ display: 'none' }} />
+              <input type="file" ref={fileInputBRef} accept="audio/*, .mp3, audio/mpeg, audio/mp3" onChange={handleFileB} style={{ display: 'none' }} />
             </div>
           )}
           <div className="jukebox-header">
